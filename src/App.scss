@@ -27,7 +27,6 @@ a {
   text-decoration: none;
   &:hover {
     color: $accent-color;
-    text-decoration: underline;
   }
 }
 
@@ -61,6 +60,10 @@ input {
   font-family: inherit;
 }
 
+.icon {
+  color: $primary-color;
+}
+
 .fw-3 {
   font-weight: 300;
 }
@@ -72,6 +75,39 @@ input {
 }
 .fw-7 {
   font-weight: 700;
+}
+
+//Navbar
+.navbar {
+  padding: 1rem 2rem;
+  box-shadow: 0 10px 15px -3px #888, 0 4px 6px -2px #999;
+  .navbar-content {
+    .toggle-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        img {
+          width: 50px;
+        }
+        span {
+          letter-spacing: 2px;
+          font-size: 2rem;
+        }
+      }
+      .nav-item-lg {
+        display: flex;
+        gap: 20px;
+      }
+    }
+    .md-nav {
+      display: none;
+    }
+  }
 }
 
 // Header
@@ -88,6 +124,56 @@ input {
       justify-content: center;
       align-items: center;
       text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    .navbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .toggle-menu {
+        .nav-item-lg {
+          display: none;
+        }
+      }
+      .md-nav {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        .btn-toggle {
+          position: relative;
+          outline: none;
+          border: none;
+          background: transparent;
+          .icon {
+            font-size: 25px;
+          }
+        }
+        .show-navbar {
+          display: block;
+          position: absolute;
+          right: 20px;
+          top: 70px;
+          background: white;
+          padding: 20px 10px;
+          border-radius: 10px;
+          .navbar-nav {
+            .nav-item {
+              padding: 10px;
+              border-bottom: 2px solid $primary-color;
+              .icon {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+        .hide-navbar {
+          display: none;
+        }
+      }
     }
   }
 }
