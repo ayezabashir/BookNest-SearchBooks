@@ -27,6 +27,7 @@ a {
   text-decoration: none;
   &:hover {
     color: $accent-color;
+    text-decoration: underline;
   }
 }
 
@@ -40,6 +41,8 @@ ul {
   border: none;
   outline: 0;
   font-family: inherit;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
   &:hover {
     background-color: $accent-color;
@@ -69,4 +72,22 @@ input {
 }
 .fw-7 {
   font-weight: 700;
+}
+
+// Header
+.header-container {
+  .header {
+    .header-content {
+      min-height: 75vh;
+      background: linear-gradient(to bottom, #e9cf3a, #e9d595),
+        url("/home.jpg") center/cover no-repeat;
+      background-blend-mode: multiply;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
 }

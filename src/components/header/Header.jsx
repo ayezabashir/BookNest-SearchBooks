@@ -1,10 +1,9 @@
-import './header.scss';
 import Navbar from '../navbar/Navbar';
 import Search from '../search/Search';
 
 const Header = () => {
     return (
-        <div className='container'>
+        <div className='header-container'>
             <header className='header'>
                 <Navbar />
                 <div className="header-content">

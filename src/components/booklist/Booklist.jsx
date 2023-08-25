@@ -1,5 +1,3 @@
-import './booklist.scss'
-
 const Booklist = () => {
     return (
         <div>
