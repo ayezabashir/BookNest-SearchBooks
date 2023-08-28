@@ -124,6 +124,9 @@ input {
       justify-content: center;
       align-items: center;
       text-align: center;
+      p {
+        max-width: 1000px;
+      }
     }
   }
 }
