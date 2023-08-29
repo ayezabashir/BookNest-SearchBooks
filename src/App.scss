@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@300;400;500;700&display=swap");
 
 $primary-color: #003366;
 $secondary-color: #ffd700;
@@ -98,8 +98,11 @@ input {
           width: 50px;
         }
         span {
+          font-family: "Cookie", sans-serif;
+          font-size: 30px !important;
           letter-spacing: 2px;
           font-size: 2rem;
+          color: $accent-color !important;
         }
       }
       .nav-item-lg {
@@ -121,12 +124,17 @@ input {
       background: linear-gradient(to bottom, #e9cf3a, #e9d595),
         url("/home.jpg") center/cover no-repeat;
       background-blend-mode: multiply;
-      color: #fff;
+      color: cornsilk;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      h2 {
+        font-family: "Cookie", sans-serif;
+        font-size: 28px;
+        letter-spacing: 3px;
+      }
       p {
         padding: 20px;
         max-width: 1000px;
@@ -139,7 +147,7 @@ input {
   .header-container {
     .header {
       .header-content {
-        height: 50vh;
+        height: 55vh;
       }
     }
   }
