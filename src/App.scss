@@ -154,6 +154,8 @@ input {
     padding: 10px 20px;
     border-radius: 20px;
     .search-form {
+      display: flex;
+      align-items: center;
       input {
         width: 100%;
       }
