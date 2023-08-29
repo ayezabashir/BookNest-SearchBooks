@@ -62,6 +62,9 @@ input {
 
 .icon {
   color: $primary-color;
+  &:hover {
+    color: $accent-color;
+  }
 }
 
 .fw-3 {
@@ -114,7 +117,7 @@ input {
 .header-container {
   .header {
     .header-content {
-      min-height: 75vh;
+      height: 75vh;
       background: linear-gradient(to bottom, #e9cf3a, #e9d595),
         url("/home.jpg") center/cover no-repeat;
       background-blend-mode: multiply;
@@ -125,6 +128,7 @@ input {
       align-items: center;
       text-align: center;
       p {
+        padding: 20px;
         max-width: 1000px;
       }
     }
@@ -132,6 +136,13 @@ input {
 }
 
 @media screen and (max-width: 768px) {
+  .header-container {
+    .header {
+      .header-content {
+        height: 50vh;
+      }
+    }
+  }
   .navbar {
     .navbar-content {
       display: flex;
@@ -146,29 +157,50 @@ input {
         display: flex !important;
         flex-direction: column;
         align-items: center;
+
         .btn-toggle {
           position: relative;
           outline: none;
           border: none;
           background: transparent;
+          cursor: pointer;
           .icon {
             font-size: 25px;
           }
         }
         .show-navbar {
-          display: block;
-          position: absolute;
-          right: 20px;
-          top: 70px;
-          background: white;
-          padding: 20px 10px;
-          border-radius: 10px;
+          height: 100vh;
+          position: fixed;
+          right: 0;
+          top: 0;
+          background: #fff;
+          padding: 20px;
+          width: 175px;
+          animation: slideIn 0.3s ease-in-out forwards;
+          transform: translateX(0);
           .navbar-nav {
+            .close {
+              cursor: pointer;
+              text-align: right;
+              font-size: 20px;
+              &:hover {
+                color: darkred;
+                transition: all 0.5s;
+              }
+            }
             .nav-item {
               padding: 10px;
-              border-bottom: 2px solid $primary-color;
+              border-bottom: 4px solid $primary-color;
               .icon {
                 margin-right: 10px;
+              }
+              &:hover {
+                border-color: $accent-color;
+                transition: all 0.5s;
+                .icon,
+                a {
+                  color: $accent-color;
+                }
               }
             }
           }
@@ -178,5 +210,14 @@ input {
         }
       }
     }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

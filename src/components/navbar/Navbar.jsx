@@ -2,10 +2,10 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import book from '/book.png'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { AiFillHome, AiFillQuestionCircle } from 'react-icons/ai'
+import { AiFillHome, AiFillQuestionCircle, AiOutlineCloseCircle } from 'react-icons/ai'
 
 const Navbar = () => {
-    const [menu, setMenu] = useState(true);
+    const [menu, setMenu] = useState(false);
     const handleMenu = () => {
         setMenu(!menu);
     }
@@ -32,6 +32,9 @@ const Navbar = () => {
                     </button>
                     <div className={menu ? "show-navbar" : "hide-navbar"}>
                         <ul className="navbar-nav">
+                            <div className="close">
+                                < AiOutlineCloseCircle onClick={() => setMenu(false)} className="close-icon" />
+                            </div>
                             <li className="nav-item">
                                 <Link to='/'>
                                     <AiFillHome className='icon' />
