@@ -9,10 +9,12 @@ const Search = () => {
         setInputText(event.target.value);
     }
 
-    const fetchBookData = (event) => {
+    async function fetchBookData(event) {
         event.preventDefault();
         let searchWord = api_url + inputtext;
-        console.log(searchWord);
+        const word = await fetch(searchWord);
+        const data = await word.json();
+        console.log(data);
     }
 
     return (
