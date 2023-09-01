@@ -15,7 +15,6 @@ const AppProvider = ({ children }) => {
             const resp = await fetch(api_url + searchTerm);
             const data = await resp.json();
             const { docs } = data;
-            console.log(docs);
             if (docs) {
                 const newBooks = docs.slice(0, 20).map((book) => {
                     const { key, author_name, cover_i, edition_count, first_publish_year, title } = book;

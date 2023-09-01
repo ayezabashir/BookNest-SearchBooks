@@ -1,4 +1,4 @@
-const book = () => {
+const Book = () => {
     return (
         <div>
             book
@@ -6,4 +6,4 @@ const book = () => {
     )
 }
 
-export default book
+export default Book
