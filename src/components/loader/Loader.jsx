@@ -1,7 +1,9 @@
+import loader from '/loader.svg'
+
 const Loader = () => {
     return (
-        <div>
-            Loader
+        <div className='loader'>
+            <img src={loader} alt="loading..." />
         </div>
     )
 }
