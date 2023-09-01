@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useContext, useEffect, useCallback } from "react";
 const api_url = 'https://openlibrary.org/search.json?title=';
 const AppContext = React.createContext();
@@ -34,7 +35,11 @@ const AppProvider = ({ children }) => {
                 } else {
                     setResultTitle('No Search Result Found');
                 }
+            } else {
+                setBooks([]);
+                setResultTitle('No Search Result Found!');
             }
+            setLoading(false);
         } catch (err) {
             console.log(err);
             setLoading(false)
