@@ -19,7 +19,7 @@ const Book = (book) => {
                     <strong>Total Editions: </strong>
                     <span>{book.edition_count}</span>
                 </div>
-                <div className="item-desc">
+                <div className="item-desc light">
                     <strong>First Published in: </strong>
                     <span>{book.first_publish_year}</span>
                 </div>
