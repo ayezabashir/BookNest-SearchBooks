@@ -364,6 +364,17 @@ input {
   }
 }
 
+@media screen and (max-width: 360px) {
+  .booklist {
+    .container {
+      .booklist-content {
+        padding: 20px;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
 @keyframes slideIn {
   0% {
     transform: translateX(100%);
