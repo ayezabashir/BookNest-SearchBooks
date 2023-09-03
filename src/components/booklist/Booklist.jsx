@@ -12,7 +12,6 @@ const Booklist = () => {
             cover_img: book.cover_id ? `https://covers.openlibrary.org/b/id/${book.cover_id}-L.jpg` : notfound
         }
     })
-    console.log(bookCovers);
     if (loading) return <Loader />
     return (
         <section className="booklist">
