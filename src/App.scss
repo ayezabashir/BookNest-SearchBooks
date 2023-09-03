@@ -133,10 +133,11 @@ input {
       text-align: center;
       h2 {
         font-family: "Cookie", sans-serif;
-        font-size: 28px;
+        font-size: 40px;
         letter-spacing: 3px;
       }
       p {
+        padding-top: 0 !important;
         padding: 20px;
         max-width: 1000px;
       }
@@ -171,7 +172,6 @@ input {
 }
 
 // loader
-
 .loader {
   display: flex;
   align-items: center;

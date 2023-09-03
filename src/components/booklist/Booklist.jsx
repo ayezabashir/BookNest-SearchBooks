@@ -1,7 +1,7 @@
 import { useGlobalContext } from "../../context"
 import Loader from '../loader/Loader'
 import notfound from '/notfound.png'
-import Book from '../booklist/Book'
+import Book from "./book"
 
 const Booklist = () => {
     const { books, loading, resultTitle } = useGlobalContext();
