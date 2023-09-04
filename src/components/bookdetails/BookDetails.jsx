@@ -42,11 +42,41 @@ const BookDetails = () => {
         }
         fetchBookDetails();
     }, [id])
-    console.log(book);
+    if (loading) return <Loader />
     return (
-        <div>
-
-        </div>
+        <section className='book-details'>
+            <div className="container">
+                <button type="button" className='btn-back' onClick={() => navigate("/book")}>
+                    <FaArrowLeft className='icon' />
+                    <span className='fw-7'>Go back</span>
+                </button>
+                <div className="book-details-content">
+                    <div className="book-details-img">
+                        <img src={book?.cover_img} alt="" />
+                    </div>
+                    <div className="book-details-info">
+                        <div className="book-details-item title">
+                            <span className="fw-7">{book?.title}</span>
+                        </div>
+                        <div className="book-details-item ">
+                            <span className="fw-5">{book?.description}</span>
+                        </div>
+                        <div className="book-details-item">
+                            <span className="fw-7">Subject Places:</span>
+                            <span className="item">{book?.subject_places}</span>
+                        </div>
+                        <div className="book-details-item">
+                            <span className="fw-7">Subject Times:</span>
+                            <span className="item">{book?.subject_times}</span>
+                        </div>
+                        <div className="book-details-item">
+                            <span className="fw-7">Subject:</span>
+                            <span className="item">{book?.subjects}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
 
